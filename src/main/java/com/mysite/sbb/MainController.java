@@ -12,6 +12,12 @@ public class MainController {
     // URL 요청에 대한 응답으로 문자열을 리턴하라는 의미
     @ResponseBody
     public String index(){
-        return "index";
+        return "안녕하세요 sbb에 오신 것을 환영합니다.";
     }
+
+    @GetMapping("/")
+    public String root(){
+        return "redirect:/question/list";
+    }
+
 }
